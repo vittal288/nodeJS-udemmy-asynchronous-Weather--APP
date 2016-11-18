@@ -1,0 +1,20 @@
+CALLBACKSTACK IN V8 JS Engine refer the image EventLoopDGM.png
+
+CALLBACK STACK-->NODE API-->CALLBACK QUEUE-->{EventLoop}-->CALLBACK STACK
+
+CALLBACK:
+-->We can delete or POP UP the item of piece of code in the top of  CALLBACK stack(it is basically data structure) 
+--Or We can add(PUSH) the item to the top of the CALLBACK STACK
+-->We cannot remove the bottom item from the stack i.e CALLBACK STACK 
+-->CALLBACK stack will execute on line of code at a time 
+
+
+NODE API:
+-->whenever CALLBACK STACK finds the call back function then that piece of code will move NODE API block 
+-->Once from NODE API it wait for it delay , once it complets it moves to CALLBACK QUEUE
+-->Mean while EventLoop will be monitering the state of CALLBACK STACK to push code from CALLBACK QUEUE to CALLBACK STACK
+
+CALLBACK QUEUE:
+CALLBACK QUEUE containt the piece code in its stack which was moved from NODE API.
+
+CALLBACK back code never execute directly from CALLBACK STACK instead it has to go through NODE API-->CALLBACK QUEUE{EventLoop}-->CALLBACK STACK
