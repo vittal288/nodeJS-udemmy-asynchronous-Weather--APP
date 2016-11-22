@@ -6,10 +6,15 @@ This is weather app
 Weather APIs
 Google Map API to find out lat and lng
 Syntax:http://maps.googleapis.com/maps/api/geocode/json?address=YOUR_ADDRSS
+
 http://maps.googleapis.com/maps/api/geocode/json?address=%22Vijayanagar%20Bangalore%22
+
 Weather Forecase Info API from darksky
+
 Syntax: https://api.darksky.net/forecast/[key]/[latitude],[longitude]
+
 https://api.darksky.net/forecast/67e781055fae0abac5216d8d9ca8b413/15.8132997,74.8565613
+
 
 Reference site 
 https://teamtreehouse.com/community/retrieving-weather-data-from-dark-sky-api-instead-of-user-data-from-treehouse
