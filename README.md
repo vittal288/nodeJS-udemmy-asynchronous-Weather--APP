@@ -16,7 +16,9 @@ https://teamtreehouse.com/community/retrieving-weather-data-from-dark-sky-api-in
 
 
 to run app 
+
 1. Navigate to app.js or app-promise.js
+
 Positive scenario 
 
 2. then hit folder_path>node app-promise.js -a "Bangalore"
