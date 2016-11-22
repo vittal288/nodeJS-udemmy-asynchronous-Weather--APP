@@ -9,6 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.78.0"
+    "axios": "^0.15.2",
+    "cli-spinner": "^0.2.5",
+    "dark-sky": "^1.0.10",
+    "forecast": "^0.3.2",
+    "forecastio": "^1.0.2",
+    "https": "^1.0.0",
+    "request": "^2.78.0",
+    "yargs": "^4.8.1"
   }
 }

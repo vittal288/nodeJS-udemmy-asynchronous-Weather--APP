@@ -18,3 +18,69 @@ CALLBACK QUEUE:
 CALLBACK QUEUE containt the piece code in its stack which was moved from NODE API.
 
 CALLBACK back code never execute directly from CALLBACK STACK instead it has to go through NODE API-->CALLBACK QUEUE{EventLoop}-->CALLBACK STACK
+
+@@@ DEBUG @@@ 
+Node app Debug 
+>node debug filePath/fileName.js 
+then press n for next line debug 
+or 
+press c to contine debugging mode 
+or
+press quit to exit from debugging 
+or press repl(read evaluate print loop) to enter in different mode of debug 
+-->then ctrl+c to come out from repl 
+-->then press quit to come out from debugging
+
+for Example 
+node debug app.js read --title="sample title" 
+
+GRAPHICAL Debugging with latest google chrome is an issue, will see you soon 
+
+--ARROW FUNCTION 
+1.Arrow function do not bind  this keyword
+2. We wont get the argument(reading argument array params) keyword inside the function
+
+@@@@ PROMISE @@@@@@@
+-->Promise are made to handle ASynchCall.
+-->We can use Promise in call back based on successed or not .
+-->We cant do resolve and reject at a time .
+-->Resolve :We are able to achive the thing and it go well
+-->Reject : We are trying to do something but , it did not go well 
+-->Resolve funtion can be captured in first argument of promise function as well reject response can be captured in 2nd argument of then function
+-->It is not possible to resolve now and reject latet,we have to do one at a time 
+-->It prevents to call callback multiple times accedentally 
+-->resolve and reject will take only one argument 
+var promise  = new Promise((resolve,reject)=>{
+    resolve('I am able to fullfill the promise ');
+    OR 
+    reject('Unable to fullfill the promise');
+});
+somePromise.then((message)=>{
+    console.log("Success:",message);
+},(errorMessage)=>{
+    console.log('Error :' ,errorMessage);
+}); 
+
+@@ In Promise Chaining:@@
+In prmoise chaining only one error block and it wil be captured in catch block as shown below 
+
+Original way to handle but promise chaining response, but it has problem !!, if there is error in first chain then it wont execute 2nd promise
+aSynchAdd(5,7).then((results)=>{
+    aSynchAdd(results,33)
+},(errorMessage)=>{
+    console.log(errorMessage)
+}).then((res)=>{
+    console.log(res)
+},(errorMessage)=>{
+    console.log(errorMessage)
+});
+
+Will introduce catch block to handle chaining promise response
+
+aSynchAdd(5,7).then((results)=>{
+    aSynchAdd(results,33)
+}).then((res)=>{
+    console.log(res)
+}).catch((errorMessage)=>{
+    console.log(errorMessage);
+});
