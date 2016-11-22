@@ -18,8 +18,13 @@ https://teamtreehouse.com/community/retrieving-weather-data-from-dark-sky-api-in
 to run app 
 1. Navigate to app.js or app-promise.js
 Positive scenario 
+
 2. then hit folder_path>node app-promise.js -a "Bangalore"
+
 3. o/p-->Currently Temperature of Bengaluru, Karnataka, India  28.366666666666667 , Feels like 26.988888888888887
+
 Negetive scenario
+
 4. folder_path>node app-promise.js -a "00000000" or folder_path>node app-promise.js -a ""
+
 o/p -->Unable to find the address
